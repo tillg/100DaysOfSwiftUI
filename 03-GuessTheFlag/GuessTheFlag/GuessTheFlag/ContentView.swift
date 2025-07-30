@@ -18,6 +18,16 @@ struct ContentView: View {
     @State private var goodGuesses = 0
     @State private var badGuesses = 0
 
+    func flagImage(_ index: Int) -> some View {
+        return Button {
+            flagTapped(index)
+        } label: {
+            Image(countries[index])
+                .clipShape(.capsule)
+                .shadow(radius: 5)
+        }
+    }
+    
     var body: some View {
         ZStack {
             RadialGradient(stops: [
@@ -44,13 +54,7 @@ struct ContentView: View {
                     }
 
                     ForEach(0..<3) { number in
-                        Button {
-                            flagTapped(number)
-                        } label: {
-                            Image(countries[number])
-                                .clipShape(.capsule)
-                                .shadow(radius: 5)
-                        }
+                        flagImage(number)
                     }
                 }
                 .frame(maxWidth: .infinity)
