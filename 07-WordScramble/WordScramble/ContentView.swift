@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
+    @State private var score = 0
 
     @State private var errorTitle = ""
     @State private var errorMessage = ""
@@ -18,6 +19,11 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack {
+            HStack {
+                Spacer()
+                Text("Score: \(score)")
+            }
+            .padding()
             List {
                 Section {
                     TextField("Enter your word", text: $newWord)
@@ -33,11 +39,14 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle(rootWord)
+            .navigationTitle("\(rootWord)")
             .onSubmit(addNewWord)
             .onAppear(perform: startGame)
             .alert(errorTitle, isPresented: $showingError) { } message: {
                 Text(errorMessage)
+            }
+            .toolbar {
+                Button("Restart", action: startGame)
             }
         }
     }
@@ -61,12 +70,22 @@ struct ContentView: View {
             wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
             return
         }
+        
+        guard isLongEnough(word: answer) else {
+            wordError(title: "Word too short", message: "We accept only words longer than 3 letters.")
+            return
+        }
+        guard isDifferentToRootWord(word: answer) else {
+            wordError(title: "Same as root word", message: "You think you're smart? 😉")
+            return
+        }
 
         withAnimation {
             usedWords.insert(answer, at: 0)
         }
 
         newWord = ""
+        score += answer.count
     }
 
     func startGame() {
@@ -106,6 +125,12 @@ struct ContentView: View {
         return misspelledRange.location == NSNotFound
     }
 
+    func isLongEnough (word: String) -> Bool {
+        word.count > 3
+    }
+    func isDifferentToRootWord(word: String) -> Bool {
+        rootWord != word
+    }
     func wordError(title: String, message: String) {
         errorTitle = title
         errorMessage = message
