@@ -20,25 +20,36 @@ class Expenses {
         didSet {
             if let encoded = try? JSONEncoder().encode(items) {
                 UserDefaults.standard.set(encoded, forKey: "Items")
+                print("Saved Items to UserDefaults")
             }
         }
+    }
+    
+    var businessItems: [ExpenseItem] {
+        self.items.filter { $0.type == "Business" }
+    }
+    var personalItems: [ExpenseItem] {
+        self.items.filter { $0.type == "Personal" }
     }
 
     init() {
         if let savedItems = UserDefaults.standard.data(forKey: "Items") {
-            if let decodedItems = try? JSONDecoder().decode([ExpenseItem].self, from: savedItems) {
+            if let decodedItems = try? JSONDecoder().decode(
+                [ExpenseItem].self,
+                from: savedItems
+            ) {
                 items = decodedItems
                 return
             }
         }
-
+        
         items = []
     }
 }
 
 struct ItemView: View {
     var item: ExpenseItem
-    var fontType:Font {
+    var fontType: Font {
         var fontType = Font.title
         if item.amount < 100 {
             fontType = .body
@@ -57,24 +68,43 @@ struct ItemView: View {
                 Text(item.type)
             }
             Spacer()
-
-            Text(item.amount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+            
+            Text(
+                item.amount,
+                format: .currency(
+                    code: Locale.current.currency?.identifier ?? "USD"
+                )
+            )
         }
     }
 }
 
 struct ContentView: View {
     @State private var expenses = Expenses()
-
+    
     @State private var showingAddExpense = false
-
+    
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(expenses.items) { item in
-                    ItemView(item: item)
+            VStack {
+                
+                List {
+                    Text("Personal")
+                        .bold()
+                    
+                    ForEach(expenses.personalItems) { item in
+                        ItemView(item: item)
+                    }
+                    .onDelete(perform: removeItems)
+                    
+                    Text("Business")
+                        .bold()
+                    
+                    ForEach(expenses.businessItems) { item in
+                        ItemView(item: item)
+                    }
+                    .onDelete(perform: removeItems)
                 }
-                .onDelete(perform: removeItems)
             }
             .navigationTitle("iExpense")
             .toolbar {
@@ -87,7 +117,7 @@ struct ContentView: View {
             }
         }
     }
-
+    
     func removeItems(at offsets: IndexSet) {
         expenses.items.remove(atOffsets: offsets)
     }
