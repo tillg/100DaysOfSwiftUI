@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+struct NiceDivider: View {
+    var body: some View {
+        Rectangle()
+            .frame(height: 2)
+            .foregroundStyle(.lightBackground)
+            .padding(.vertical)
+    }
+}
 struct MissionView: View {
     struct CrewMember {
         let role: String
@@ -25,12 +33,14 @@ struct MissionView: View {
                     .containerRelativeFrame(.horizontal) { width, axis in
                         width * 0.6
                     }
-
+                if let launchDate = mission.launchDate {
+                    let launchDateStr = launchDate.formatted(date: .complete, time: .omitted)
+                    Text(launchDateStr)
+                        .font(.headline)
+                }
+                
                 VStack(alignment: .leading) {
-                    Rectangle()
-                        .frame(height: 2)
-                        .foregroundStyle(.lightBackground)
-                        .padding(.vertical)
+                    NiceDivider()
 
                     Text("Mission Highlights")
                         .font(.title.bold())
@@ -38,10 +48,7 @@ struct MissionView: View {
 
                     Text(mission.description)
 
-                    Rectangle()
-                        .frame(height: 2)
-                        .foregroundStyle(.lightBackground)
-                        .padding(.vertical)
+                    NiceDivider()
 
                     Text("Crew")
                         .font(.title.bold())
@@ -104,6 +111,6 @@ struct MissionView: View {
     let missions: [Mission] = Bundle.main.decode("missions.json")
     let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
 
-    return MissionView(mission: missions[0], astronauts: astronauts)
+    return MissionView(mission: missions[1], astronauts: astronauts)
         .preferredColorScheme(.dark)
 }
