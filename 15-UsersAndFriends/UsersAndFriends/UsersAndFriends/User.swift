@@ -41,4 +41,9 @@ class User: Codable {
     }
     
      static let example: User = .init(id : UUID(), isActive: true, name: "John Doe", age: 30, company: "Apple Inc.", email: "johndoe@example.com", address: "123 Main Street, New York, NY 10001", about: "I am a developer working at Apple Inc.", registered: "2017-07-24T08:18:32Z", tags: ["developer", "apple"], friends: [])
+    
+    static func userById(users: [User], userId: UUID) -> User {
+        let user = users.first(where: { $0.id == userId })
+        return user ?? User.example
+    }
 }

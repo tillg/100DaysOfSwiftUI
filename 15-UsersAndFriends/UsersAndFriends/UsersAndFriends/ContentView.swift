@@ -14,16 +14,8 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ForEach(users, id: \.id) { user in
-                    NavigationLink(destination: UserView(user: user)) {
-                        HStack {
-                            Text(user.name)
-                            Spacer()
-                            Image(systemName: user.isActive ? "checkmark.circle.fill" : "xmark.circle.fill")
-                                .foregroundColor(user.isActive ? .green : .red)
-                        }
-                    }
+                    UserListView(users: users, userId: user.id)
                 }
-            
             }
             .toolbar {
                 Button("Load users") {
