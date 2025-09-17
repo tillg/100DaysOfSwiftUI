@@ -15,7 +15,6 @@
 		51766B412BEB874700E3A166 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B402BEB874700E3A166 /* EditView.swift */; };
 		51766B432BEB87E300E3A166 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B422BEB87E300E3A166 /* Result.swift */; };
 		51766B452BEB886400E3A166 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B442BEB886400E3A166 /* ContentView-ViewModel.swift */; };
-		F975DF7A2E65B1E800ED279B /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F975DF792E65B1E800ED279B /* EditView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +27,6 @@
 		51766B402BEB874700E3A166 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		51766B422BEB87E300E3A166 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		51766B442BEB886400E3A166 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
-		F975DF792E65B1E800ED279B /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "EditView-ViewModel.swift"; path = "Bucketlist/EditView-ViewModel.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 				51766B322BEB867500E3A166 /* ContentView.swift */,
 				51766B402BEB874700E3A166 /* EditView.swift */,
 				51766B442BEB886400E3A166 /* ContentView-ViewModel.swift */,
-				F975DF792E65B1E800ED279B /* EditView-ViewModel.swift */,
 				51766B422BEB87E300E3A166 /* Result.swift */,
 				51766B3E2BEB869A00E3A166 /* Location.swift */,
 				51766B342BEB867600E3A166 /* Assets.xcassets */,
@@ -110,7 +107,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					51766B2C2BEB867500E3A166 = {
 						CreatedOnToolsVersion = 15.3;
@@ -155,7 +152,6 @@
 				51766B332BEB867500E3A166 /* ContentView.swift in Sources */,
 				51766B452BEB886400E3A166 /* ContentView-ViewModel.swift in Sources */,
 				51766B432BEB87E300E3A166 /* Result.swift in Sources */,
-				F975DF7A2E65B1E800ED279B /* EditView-ViewModel.swift in Sources */,
 				51766B3F2BEB869A00E3A166 /* Location.swift in Sources */,
 				51766B412BEB874700E3A166 /* EditView.swift in Sources */,
 				51766B312BEB867500E3A166 /* BucketListApp.swift in Sources */,
@@ -200,6 +196,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 67P25VJ33Z;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -223,6 +220,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -263,6 +261,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 67P25VJ33Z;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -279,6 +278,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -292,7 +292,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BucketList/Preview Content\"";
-				DEVELOPMENT_TEAM = 67P25VJ33Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places.";
@@ -322,7 +321,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BucketList/Preview Content\"";
-				DEVELOPMENT_TEAM = 67P25VJ33Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places.";

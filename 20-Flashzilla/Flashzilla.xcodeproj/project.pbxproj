@@ -7,32 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51766B312BEB867500E3A166 /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B302BEB867500E3A166 /* BucketListApp.swift */; };
-		51766B332BEB867500E3A166 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B322BEB867500E3A166 /* ContentView.swift */; };
-		51766B352BEB867600E3A166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51766B342BEB867600E3A166 /* Assets.xcassets */; };
-		51766B382BEB867600E3A166 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51766B372BEB867600E3A166 /* Preview Assets.xcassets */; };
-		51766B3F2BEB869A00E3A166 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B3E2BEB869A00E3A166 /* Location.swift */; };
-		51766B412BEB874700E3A166 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B402BEB874700E3A166 /* EditView.swift */; };
-		51766B432BEB87E300E3A166 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B422BEB87E300E3A166 /* Result.swift */; };
-		51766B452BEB886400E3A166 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B442BEB886400E3A166 /* ContentView-ViewModel.swift */; };
-		F975DF7A2E65B1E800ED279B /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F975DF792E65B1E800ED279B /* EditView-ViewModel.swift */; };
+		51766B902BEB981E00E3A166 /* FlashzillaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B8F2BEB981E00E3A166 /* FlashzillaApp.swift */; };
+		51766B922BEB981E00E3A166 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B912BEB981E00E3A166 /* ContentView.swift */; };
+		51766B942BEB982000E3A166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51766B932BEB982000E3A166 /* Assets.xcassets */; };
+		51766B972BEB982000E3A166 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51766B962BEB982000E3A166 /* Preview Assets.xcassets */; };
+		51766B9E2BEB985100E3A166 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B9D2BEB985100E3A166 /* Card.swift */; };
+		51766BA02BEB985E00E3A166 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766B9F2BEB985E00E3A166 /* CardView.swift */; };
+		51766BA22BEB9C4500E3A166 /* EditCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766BA12BEB9C4500E3A166 /* EditCards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		51766B2D2BEB867500E3A166 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		51766B302BEB867500E3A166 /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
-		51766B322BEB867500E3A166 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		51766B342BEB867600E3A166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		51766B372BEB867600E3A166 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		51766B3E2BEB869A00E3A166 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		51766B402BEB874700E3A166 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
-		51766B422BEB87E300E3A166 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		51766B442BEB886400E3A166 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
-		F975DF792E65B1E800ED279B /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "EditView-ViewModel.swift"; path = "Bucketlist/EditView-ViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		51766B8C2BEB981E00E3A166 /* Flashzilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashzilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51766B8F2BEB981E00E3A166 /* FlashzillaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashzillaApp.swift; sourceTree = "<group>"; };
+		51766B912BEB981E00E3A166 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		51766B932BEB982000E3A166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51766B962BEB982000E3A166 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		51766B9D2BEB985100E3A166 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		51766B9F2BEB985E00E3A166 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		51766BA12BEB9C4500E3A166 /* EditCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		51766B2A2BEB867500E3A166 /* Frameworks */ = {
+		51766B892BEB981E00E3A166 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,42 +38,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		51766B242BEB867500E3A166 = {
+		51766B832BEB981E00E3A166 = {
 			isa = PBXGroup;
 			children = (
-				51766B2F2BEB867500E3A166 /* BucketList */,
-				51766B2E2BEB867500E3A166 /* Products */,
+				51766B8E2BEB981E00E3A166 /* Flashzilla */,
+				51766B8D2BEB981E00E3A166 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		51766B2E2BEB867500E3A166 /* Products */ = {
+		51766B8D2BEB981E00E3A166 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				51766B2D2BEB867500E3A166 /* BucketList.app */,
+				51766B8C2BEB981E00E3A166 /* Flashzilla.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		51766B2F2BEB867500E3A166 /* BucketList */ = {
+		51766B8E2BEB981E00E3A166 /* Flashzilla */ = {
 			isa = PBXGroup;
 			children = (
-				51766B302BEB867500E3A166 /* BucketListApp.swift */,
-				51766B322BEB867500E3A166 /* ContentView.swift */,
-				51766B402BEB874700E3A166 /* EditView.swift */,
-				51766B442BEB886400E3A166 /* ContentView-ViewModel.swift */,
-				F975DF792E65B1E800ED279B /* EditView-ViewModel.swift */,
-				51766B422BEB87E300E3A166 /* Result.swift */,
-				51766B3E2BEB869A00E3A166 /* Location.swift */,
-				51766B342BEB867600E3A166 /* Assets.xcassets */,
-				51766B362BEB867600E3A166 /* Preview Content */,
+				51766B8F2BEB981E00E3A166 /* FlashzillaApp.swift */,
+				51766B912BEB981E00E3A166 /* ContentView.swift */,
+				51766B9F2BEB985E00E3A166 /* CardView.swift */,
+				51766B9D2BEB985100E3A166 /* Card.swift */,
+				51766BA12BEB9C4500E3A166 /* EditCards.swift */,
+				51766B932BEB982000E3A166 /* Assets.xcassets */,
+				51766B952BEB982000E3A166 /* Preview Content */,
 			);
-			path = BucketList;
+			path = Flashzilla;
 			sourceTree = "<group>";
 		};
-		51766B362BEB867600E3A166 /* Preview Content */ = {
+		51766B952BEB982000E3A166 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				51766B372BEB867600E3A166 /* Preview Assets.xcassets */,
+				51766B962BEB982000E3A166 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -85,39 +79,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		51766B2C2BEB867500E3A166 /* BucketList */ = {
+		51766B8B2BEB981E00E3A166 /* Flashzilla */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 51766B3B2BEB867600E3A166 /* Build configuration list for PBXNativeTarget "BucketList" */;
+			buildConfigurationList = 51766B9A2BEB982000E3A166 /* Build configuration list for PBXNativeTarget "Flashzilla" */;
 			buildPhases = (
-				51766B292BEB867500E3A166 /* Sources */,
-				51766B2A2BEB867500E3A166 /* Frameworks */,
-				51766B2B2BEB867500E3A166 /* Resources */,
+				51766B882BEB981E00E3A166 /* Sources */,
+				51766B892BEB981E00E3A166 /* Frameworks */,
+				51766B8A2BEB981E00E3A166 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BucketList;
-			productName = BucketList;
-			productReference = 51766B2D2BEB867500E3A166 /* BucketList.app */;
+			name = Flashzilla;
+			productName = Flashzilla;
+			productReference = 51766B8C2BEB981E00E3A166 /* Flashzilla.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		51766B252BEB867500E3A166 /* Project object */ = {
+		51766B842BEB981E00E3A166 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					51766B2C2BEB867500E3A166 = {
+					51766B8B2BEB981E00E3A166 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
-			buildConfigurationList = 51766B282BEB867500E3A166 /* Build configuration list for PBXProject "Bucketlist" */;
+			buildConfigurationList = 51766B872BEB981E00E3A166 /* Build configuration list for PBXProject "Flashzilla" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -125,47 +119,45 @@
 				en,
 				Base,
 			);
-			mainGroup = 51766B242BEB867500E3A166;
-			productRefGroup = 51766B2E2BEB867500E3A166 /* Products */;
+			mainGroup = 51766B832BEB981E00E3A166;
+			productRefGroup = 51766B8D2BEB981E00E3A166 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				51766B2C2BEB867500E3A166 /* BucketList */,
+				51766B8B2BEB981E00E3A166 /* Flashzilla */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		51766B2B2BEB867500E3A166 /* Resources */ = {
+		51766B8A2BEB981E00E3A166 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51766B382BEB867600E3A166 /* Preview Assets.xcassets in Resources */,
-				51766B352BEB867600E3A166 /* Assets.xcassets in Resources */,
+				51766B972BEB982000E3A166 /* Preview Assets.xcassets in Resources */,
+				51766B942BEB982000E3A166 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		51766B292BEB867500E3A166 /* Sources */ = {
+		51766B882BEB981E00E3A166 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51766B332BEB867500E3A166 /* ContentView.swift in Sources */,
-				51766B452BEB886400E3A166 /* ContentView-ViewModel.swift in Sources */,
-				51766B432BEB87E300E3A166 /* Result.swift in Sources */,
-				F975DF7A2E65B1E800ED279B /* EditView-ViewModel.swift in Sources */,
-				51766B3F2BEB869A00E3A166 /* Location.swift in Sources */,
-				51766B412BEB874700E3A166 /* EditView.swift in Sources */,
-				51766B312BEB867500E3A166 /* BucketListApp.swift in Sources */,
+				51766B922BEB981E00E3A166 /* ContentView.swift in Sources */,
+				51766B9E2BEB985100E3A166 /* Card.swift in Sources */,
+				51766BA02BEB985E00E3A166 /* CardView.swift in Sources */,
+				51766BA22BEB9C4500E3A166 /* EditCards.swift in Sources */,
+				51766B902BEB981E00E3A166 /* FlashzillaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		51766B392BEB867600E3A166 /* Debug */ = {
+		51766B982BEB982000E3A166 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,7 +220,7 @@
 			};
 			name = Debug;
 		};
-		51766B3A2BEB867600E3A166 /* Release */ = {
+		51766B992BEB982000E3A166 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,29 +276,28 @@
 			};
 			name = Release;
 		};
-		51766B3C2BEB867600E3A166 /* Debug */ = {
+		51766B9B2BEB982000E3A166 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BucketList/Preview Content\"";
-				DEVELOPMENT_TEAM = 67P25VJ33Z;
+				DEVELOPMENT_ASSET_PATHS = "\"Flashzilla/Preview Content\"";
+				DEVELOPMENT_TEAM = B5C26XE59E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.grtnr.BucketList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.Flashzilla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -314,29 +305,28 @@
 			};
 			name = Debug;
 		};
-		51766B3D2BEB867600E3A166 /* Release */ = {
+		51766B9C2BEB982000E3A166 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BucketList/Preview Content\"";
-				DEVELOPMENT_TEAM = 67P25VJ33Z;
+				DEVELOPMENT_ASSET_PATHS = "\"Flashzilla/Preview Content\"";
+				DEVELOPMENT_TEAM = B5C26XE59E;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.grtnr.BucketList;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.Flashzilla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -347,25 +337,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		51766B282BEB867500E3A166 /* Build configuration list for PBXProject "Bucketlist" */ = {
+		51766B872BEB981E00E3A166 /* Build configuration list for PBXProject "Flashzilla" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				51766B392BEB867600E3A166 /* Debug */,
-				51766B3A2BEB867600E3A166 /* Release */,
+				51766B982BEB982000E3A166 /* Debug */,
+				51766B992BEB982000E3A166 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		51766B3B2BEB867600E3A166 /* Build configuration list for PBXNativeTarget "BucketList" */ = {
+		51766B9A2BEB982000E3A166 /* Build configuration list for PBXNativeTarget "Flashzilla" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				51766B3C2BEB867600E3A166 /* Debug */,
-				51766B3D2BEB867600E3A166 /* Release */,
+				51766B9B2BEB982000E3A166 /* Debug */,
+				51766B9C2BEB982000E3A166 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 51766B252BEB867500E3A166 /* Project object */;
+	rootObject = 51766B842BEB981E00E3A166 /* Project object */;
 }

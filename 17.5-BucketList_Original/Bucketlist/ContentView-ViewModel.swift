@@ -8,8 +8,6 @@
 import CoreLocation
 import Foundation
 import LocalAuthentication
-import MapKit
-import SwiftUI
 
 extension ContentView {
     @Observable
@@ -19,19 +17,7 @@ extension ContentView {
         private(set) var locations: [Location]
         var selectedPlace: Location?
         var isUnlocked = false
-        var showAlert: Bool = false
-        var alertMessage: String = ""
-        var alertTitle: String = ""
-        private var mapStyleString = "standard"
-        var mapStyle: MapStyle {
-            switch mapStyleString {
-                case "standard": .standard
-                case "hybrid": .hybrid
-                case "imagery": .imagery
-                default: .standard
-            }
-        }
-        
+
         init() {
             do {
                 let data = try Data(contentsOf: savePath)
@@ -47,9 +33,6 @@ extension ContentView {
                 try data.write(to: savePath, options: [.atomic, .completeFileProtection])
             } catch {
                 print("Unable to save data.")
-                alertTitle = "Error"
-                alertMessage = "Unable to save data."
-                showAlert = true
             }
         }
 
@@ -67,7 +50,6 @@ extension ContentView {
         }
 
         func authenticate() {
-            print("Authenticating...")
             let context = LAContext()
             var error: NSError?
 
@@ -77,31 +59,13 @@ extension ContentView {
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
 
                     if success {
-                        print("Authenticated successfully!")
                         self.isUnlocked = true
                     } else {
-                        self.alertTitle = "Error"
-                        self.alertMessage = "Authentication failed."
-                        print(self.alertMessage)
-                        self.showAlert = true
+                        // error
                     }
                 }
             } else {
-                self.alertTitle = "Error"
-                self.alertMessage = "No Biometric Authentication available."
-                print(self.alertMessage)
-                self.showAlert = true
-            }
-        }
-        
-        func switchMapStyle() {
-            switch mapStyleString  {
-            case "standard":
-                mapStyleString = "hybrid"
-            case "hybrid":
-                mapStyleString = "imagery"
-            default:
-                mapStyleString = "standard"
+                // no biometrics
             }
         }
     }

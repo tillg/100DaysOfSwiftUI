@@ -32,6 +32,7 @@ struct ContentView: View {
                                     .background(.white)
                                     .clipShape(.circle)
                                     .onLongPressGesture {
+                                        print("Long pressure!")
                                         viewModel.selectedPlace = location
                                     }
                             }
