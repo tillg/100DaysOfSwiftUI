@@ -4,16 +4,18 @@
 //
 //  Created by Paul Hudson on 08/05/2024.
 //
-
+import SwiftData
 import SwiftUI
 
 struct EditCards: View {
     @Environment(\.dismiss) var dismiss
-    @State private var cards = [Card]()
+    @Environment(\.modelContext) var modelContext
+    @Query() var cards: [Card]
     @State private var newPrompt = ""
     @State private var newAnswer = ""
 
     var body: some View {
+
         NavigationStack {
             List {
                 Section("Add new card") {
@@ -23,11 +25,11 @@ struct EditCards: View {
                 }
 
                 Section {
-                    ForEach(0..<cards.count, id: \.self) { index in
+                    ForEach(cards, id: \.self) { card in
                         VStack(alignment: .leading) {
-                            Text(cards[index].prompt)
+                            Text(card.prompt)
                                 .font(.headline)
-                            Text(cards[index].answer)
+                            Text(card.answer)
                                 .foregroundStyle(.secondary)
                         }
                     }
@@ -38,26 +40,11 @@ struct EditCards: View {
             .toolbar {
                 Button("Done", action: done)
             }
-            .onAppear(perform: loadData)
         }
     }
 
     func done() {
         dismiss()
-    }
-
-    func loadData() {
-        if let data = UserDefaults.standard.data(forKey: "Cards") {
-            if let decoded = try? JSONDecoder().decode([Card].self, from: data) {
-                cards = decoded
-            }
-        }
-    }
-
-    func saveData() {
-        if let data = try? JSONEncoder().encode(cards) {
-            UserDefaults.standard.set(data, forKey: "Cards")
-        }
     }
 
     func addCard() {
@@ -66,15 +53,16 @@ struct EditCards: View {
         guard trimmedPrompt.isEmpty == false && trimmedAnswer.isEmpty == false else { return }
 
         let card = Card(prompt: trimmedPrompt, answer: trimmedAnswer)
-        cards.insert(card, at: 0)
+        modelContext.insert(card)
         newPrompt = ""
         newAnswer = ""
-        saveData()
     }
 
     func removeCards(at offsets: IndexSet) {
-        cards.remove(atOffsets: offsets)
-        saveData()
+        for index in offsets {
+            let card = cards[index]
+            modelContext.delete(card)
+        }
     }
 }
 

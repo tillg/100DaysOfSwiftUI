@@ -4,7 +4,7 @@
 //
 //  Created by Paul Hudson on 08/05/2024.
 //
-
+import SwiftData
 import SwiftUI
 
 extension View {
@@ -18,7 +18,8 @@ struct ContentView: View {
     @Environment(\.accessibilityDifferentiateWithoutColor) var accessibilityDifferentiateWithoutColor
     @Environment(\.accessibilityVoiceOverEnabled) var accessibilityVoiceOverEnabled
 
-    @State private var cards = [Card]()
+    @Environment(\.modelContext) var modelContext
+    var cards = [Card]()
 
     @State private var timeRemaining = 100
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -151,10 +152,12 @@ struct ContentView: View {
     }
 
     func loadData() {
-        if let data = UserDefaults.standard.data(forKey: "Cards") {
-            if let decoded = try? JSONDecoder().decode([Card].self, from: data) {
-                cards = decoded
-            }
+        do {
+            let descriptor = FetchDescriptor<Card>()
+            cards = try modelContext.fetch(descriptor)
+        } catch {
+            print("Failed to fetch cards from SwiftData: \(error)")
+            cards = []
         }
     }
 
